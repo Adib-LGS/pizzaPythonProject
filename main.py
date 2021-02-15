@@ -19,9 +19,13 @@ def show_pizza(collection):
 
 def add_pizza_user(collection):
     new_pizza = input("Add a new Pizza: ")
-    collection.append(new_pizza)
+    # Check if the pizza already exist in List
+    if new_pizza.lower() in collection:
+        print("OOoops there's the same pizza in the list")
+    else:
+        collection.append(new_pizza)
 
 
-pizzas = ["BlowMinder", "NightStalker", "Fairyzzas", "OnceUponAtamscotta"]
+pizzas = ["blowminder", "nightstalker", "fairyzzas", "onceuponatamscotta"]
 add_pizza_user(pizzas)
 show_pizza(pizzas)
